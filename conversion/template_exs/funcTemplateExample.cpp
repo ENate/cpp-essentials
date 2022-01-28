@@ -13,6 +13,15 @@ U nonAndTemplateParameters(U jNumber, float kNumber)
     // std::cout << "second parameter: " << kNumber <<'\n';
     return (jNumber < kNumber) ? jNumber : kNumber;
 }
+// using two types of template parameters
+// use for an auto return type -- we’ll let the compiler deduce what the return type should be from the 
+// return statemenuse for an auto return type -- we’ll let the compiler 
+// deduce what the return type should be from the return statemen
+template<typename T, typename U>
+auto compareNumbers(T aNumber1, U aNumber2)
+{
+    return (aNumber1 > aNumber2) ? aNumber1 : aNumber2;
+}
 
 int main()
 {
@@ -27,6 +36,10 @@ int main()
     std::cout << "Calling with normal functions " << addNumbers(fNumber, gNumber) <<'\n';
     std::cout << "----------------------calling template and non-template parameters --------------------\n";
     std::cout << "Non-template and template parameters: " << nonAndTemplateParameters(aNumber, fNumber) <<'\n';
+    // calling template function with 2 different types of arguments
+    std::cout << "Resulting comparison: " << addNumbers( aNumber, static_cast<int>(gNumber)) <<'\n';
+    // Calling template function with 2 different types of arguments
+    std::cout << "Resulting comparison for different types: " << compareNumbers(aNumber, fNumber) <<'\n';
 
     return 0;
 }
