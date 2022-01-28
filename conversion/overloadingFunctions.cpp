@@ -17,7 +17,7 @@ double add(double x, int y)
     return x * y;
 }
 // default arguments in functions
-double add(double x, double y, double z=10.002)
+double defaultArguments(double x, double y, double z=0.002)
 {
     std::cout << "Default Argument: \n";
     return x + y * z;
@@ -37,8 +37,8 @@ int main()
     std::cout << "Adding double: " << add(xNum, yNum) << '\n';
     // Do for mixed data types
     std::cout << "Calculating sum for mixed data types: " << add(xNum, eNum) << '\n';
-    return 0;
 
     // case for default arguments
-    std::cout << "For defualt arguments: " << add(xNum, yNum) << '\n';
+    std::cout << "For defualt arguments: " << defaultArguments(xNum, yNum) << '\n';
+    return 0;
 }
