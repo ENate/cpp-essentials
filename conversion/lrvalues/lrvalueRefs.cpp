@@ -11,6 +11,14 @@ int main()
     xValue = 33;
     std::cout << xValue << refXvalue << '\n';
 
+    // referencing a constant value
+    const double salary{12.000};
+    const double& refSalary{salary};
+
+    std::cout << "Referenced constant lvalue: \n";
+    std::cout << '\n';
+    std::cout << salary << " \nreference: " << refSalary << '\n';
+
     // references cannot be reseated
     int yValue{7};
     refXvalue =yValue;
