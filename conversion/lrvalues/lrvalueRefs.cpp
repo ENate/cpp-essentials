@@ -2,8 +2,8 @@
 
 int main()
 {
-    int xValue{5};
-    int& refXvalue{xValue};
+    int xValue{5}; // referent
+    int& refXvalue{xValue}; // reference binding: not possible for constant values
 
     std::cout << "Printing ...\n";
     std::cout << xValue << refXvalue << '\n';
